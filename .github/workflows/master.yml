@@ -1,0 +1,19 @@
+---
+name: "Master"
+
+on:
+  push:
+
+jobs:
+  terraform:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.0'
+          extensions: 'pdo, mbstring, protobuf, grpc'
+          tools: 'composer:v1, prestissimo'
+          coverage: 'none'
