@@ -11,9 +11,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@v2.19.0
         with:
           php-version: '7.0'
-          extensions: 'pdo, mbstring, protobuf, grpc'
           tools: 'composer:v1, prestissimo'
           coverage: 'none'
